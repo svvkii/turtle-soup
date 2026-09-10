@@ -7,8 +7,14 @@ services:
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: OPENAI_BASE_URL
-        value: https://api.deepseek.com/v1
+        value: https://api-inference.modelscope.cn/v1
       - key: OPENAI_MODEL
-        value: deepseek-v4.1-flash-expires-on-0910
+        value: Qwen/Qwen3.8-Flash-Next
+      - key: LLM_EXTRA_BODY
+        value: '{"enable_thinking": false}'
+      - key: DEFAULT_ROOM
+        value: HALL
+      - key: PUZZLE_SOURCE
+        value: bank_first
       - key: OPENAI_API_KEY
         sync: false

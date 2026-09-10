@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no" />
+<title>海龟汤 · 房间</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="room-page">
+  <header class="room-header">
+    <div class="room-title">
+      <span class="logo-sm">🥣</span>
+      <span id="roomCode">----</span>
+    </div>
+    <div class="room-actions">
+      <button id="shareBtn" class="btn ghost sm">分享</button>
+      <button id="playersBtn" class="btn ghost sm">👥 <span id="onlineCount">0</span></button>
+    </div>
+  </header>
+
+  <div id="playersBar" class="players-bar"></div>
+
+  <main id="messages" class="messages"></main>
+
+  <div id="typing" class="typing hidden"><span></span><span></span><span></span> 汤主思考中</div>
+
+  <footer class="composer">
+    <div id="quickBar" class="quick-bar"></div>
+    <div class="input-row">
+      <input id="input" placeholder="说点什么，或点上方快捷指令" maxlength="500" autocomplete="off" />
+      <button id="sendBtn" class="btn primary">发送</button>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
